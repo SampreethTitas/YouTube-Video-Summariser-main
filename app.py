@@ -14,6 +14,7 @@ def summary_api():
     summary = get_summary(get_transcript(video_id))
     return summary, 'Summary Generated..!'
 
+
 @app.get('/transcript')
 def transcript_api():
     url = request.args.get('url', '')
@@ -21,8 +22,8 @@ def transcript_api():
 
 
 
-    summary = get_transcript(video_id)
-    return summary, 'Summary Generated..!'
+    subtitle = get_transcript(video_id)
+    return subtitle, 'Summary Generated..!'
 
 def get_transcript(video_id):
     try:
